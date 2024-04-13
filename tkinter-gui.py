@@ -6,7 +6,7 @@ import cv2
 class ImageResizerApp:
     def __init__(self, master):
         self.master = master
-        master.title("Image Resizer    -     https://github.com/anonfaded/image-resizer")
+        master.title("Image Resizer")
 
         # Set dark mode theme
         master.configure(bg="#1E1E1E")
@@ -14,6 +14,7 @@ class ImageResizerApp:
         self.entry_bg = "#333333"
         self.button_bg = "#555555"
         self.button_fg = "#FFFFFF"
+        self.github = "green"
 
         # Labels
         self.source_label = tk.Label(master, text="Source Image:", bg="#1E1E1E", fg=self.label_color)
@@ -46,7 +47,10 @@ class ImageResizerApp:
         self.resize_button.grid(row=3, column=1, pady=(30, 0))
 
         # Information Text
-        self.info_text = tk.Label(master, text=f"Please select the source image that you want to resize and type the name of output image,\n specify the scale percentage, and click 'Resize Image' to proceed.", bg="#1E1E1E", fg=self.label_color, padx=10, pady=10)
+        self.info_text = tk.Label(master, text=f"Please select the source image that you want to resize and type the name of output image,\n specify the scale percentage, and click 'Resize Image' to proceed.\n", bg="#1E1E1E", fg=self.label_color, padx=10, pady=10)
+        # github bottom
+        self.info_text.grid(row=4, column=0, columnspan=3, pady=(0, 55))
+        self.info_text = tk.Label(master, text="https://github.com/anonfaded/image-resizer", bg="#1E1E1E", fg=self.github, padx=10, pady=10)
         self.info_text.grid(row=4, column=0, columnspan=3, padx=(5, 5))
 
     def browse_source(self):
