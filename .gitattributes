@@ -1,1 +1,2 @@
 image-resizer-GUI.exe filter=lfs diff=lfs merge=lfs -text
+image-resizer_Windows.exe filter=lfs diff=lfs merge=lfs -text
