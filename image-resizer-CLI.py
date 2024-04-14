@@ -7,13 +7,7 @@ import cv2
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def check_dependencies():
-    try:
-        import cv2
-    except ImportError:
-        print(Fore.YELLOW + "OpenCV is not installed. Installing...")
-        subprocess.run(["pip", "install", "opencv-python"], check=True)
-        print(Fore.GREEN + "OpenCV installed successfully.")
+
 
 def select_image():
     root = Tk()
@@ -56,8 +50,7 @@ def main():
     # Clear the terminal
     clear_terminal()
 
-    # Check and install dependencies
-    check_dependencies()
+
 
     while True:
         # Get source image path
